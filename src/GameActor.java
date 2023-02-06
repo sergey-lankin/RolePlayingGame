@@ -64,9 +64,9 @@ abstract class GameActor implements Attacking {
     @Override
     public int attack() {
         int setKick = (int)(Math.random());
-        if ((this.power) * 3 > setKick * 100) {
+        if (this.power * 3 > setKick * 100 && this.power < setKick * 60) {
             return power;
-        } else if ((this.power) * 3 == setKick * 100) {
+        } else if (this.power > setKick * 60) {
             return power * 2;
         } else return 0;
     }

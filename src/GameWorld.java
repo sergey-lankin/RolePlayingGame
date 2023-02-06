@@ -38,8 +38,9 @@ public class GameWorld {
                     int offer = Integer.parseInt(consoleTyping.readLine());
                     dealer.sale(hero, offer);
                     printMenu();
-                } catch (IOException e) {
-                    e.getMessage();
+                } catch (NumberFormatException e) {
+                    System.out.println("Вы ввели некорректное значение");
+                    printMenu();
                 }
                 break;
             }
