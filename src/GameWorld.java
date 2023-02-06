@@ -35,9 +35,7 @@ public class GameWorld {
                 }
                 try {
                     System.out.println("На какую сумму Вы хотите приобрести товар?");
-
-                    int offer = consoleTyping.read() - 48;
-                    System.out.println(offer);
+                    int offer = Integer.parseInt(consoleTyping.readLine());
                     dealer.sale(hero, offer);
                     printMenu();
                 } catch (IOException e) {
